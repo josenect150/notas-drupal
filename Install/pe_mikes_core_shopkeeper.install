@@ -1,0 +1,27 @@
+<?php
+
+function pe_mikes_core_shopkeeper_schema()
+{
+
+    $schema['pe_mikes_core_shopkeeper_code_bees'] = require_once(__DIR__ . '/src/schemas/pe_mikes_core_shopkeeper_code_bees.php');
+    $schema['pe_mikes_core_shopkeeper_progress'] = require_once(__DIR__ . '/src/schemas/pe_mikes_core_shopkeeper_progress.php');
+    return $schema;
+}
+
+function pe_mikes_core_shopkeeper_uninstall()
+{
+    $db_connection = \Drupal::database();
+    $db_connection->schema()->dropTable('pe_mikes_core_shopkeeper_code_bees');
+    $db_connection->schema()->dropTable('pe_mikes_core_shopkeeper_progress');
+}
+
+function pe_mikes_core_shopkeeper_install()
+{
+
+    //  require(__DIR__ .'/src/migrations/pe_mikes_core_shopkeeper_home_page.php');
+    //  require(__DIR__ .'/src/migrations/pe_mikes_core_shopkeeper_menus.php');
+    //  require(__DIR__ .'/src/migrations/pe_mikes_core_shopkeeper_fields_drupal.php');
+    //  require(__DIR__ .'/src/migrations/pe_mikes_core_shopkeeper_sessions.php');
+    //  require(__DIR__ .'/src/migrations/pe_mikes_core_shopkeeper_taxonomy_cities.php');
+
+}
